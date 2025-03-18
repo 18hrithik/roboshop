@@ -69,8 +69,8 @@ cp /home/ec2-user/roboshop/catalogue.service /etc/systemd/system/catalogue.servi
 systemctl daemon-reload &>> $LOGFILE
 VALIDATE $? "Daemon reload"
 
-systemctl enable catalogue &>> $LOGFILE
-VALIDATE $? "Enable catalogue"
+#systemctl enable catalogue &>> $LOGFILE
+#VALIDATE $? "Enable catalogue"
 
 systemctl start catalogue &>> $LOGFILE
 VALIDATE $? "Start catalogue"
