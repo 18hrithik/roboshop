@@ -29,5 +29,3 @@ fi
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 VALIDATE $? "Copied mongo repo"
-
-hi this is hrithik id like to d some
