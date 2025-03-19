@@ -52,5 +52,5 @@ VALIDATE $? "Extracting web application"
 cp /home/centos/roboshop/roboshop.conf /etc/nginx/default.d/roboshop.conf  &>>$LOGFILE
 VALIDATE $? "copying roboshop conf"
 
-systemctl restart nginx &>>$LOGFILE
-VALIDATE $? "Restarting Nginx"
+systemctl restart nginx       &>>$LOGFILE
+VALIDATE $? "Restarted Nginx"
