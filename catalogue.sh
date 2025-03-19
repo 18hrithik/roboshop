@@ -64,13 +64,13 @@ VALIDATE $? "extracting catalogue"
 npm install &>> $LOGFILE
 VALIDATE $? "Installing dependencies"
 
-cp /home/ec2-user/roboshop/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
+cp /Users/repos/roboshop/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 
 systemctl daemon-reload &>> $LOGFILE
 VALIDATE $? "Daemon reload"
 
-#systemctl enable catalogue &>> $LOGFILE
-#VALIDATE $? "Enable catalogue"
+systemctl enable catalogue &>> $LOGFILE
+VALIDATE $? "Enable catalogue"
 
 systemctl start catalogue &>> $LOGFILE
 VALIDATE $? "Start catalogue"
