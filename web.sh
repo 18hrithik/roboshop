@@ -8,7 +8,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-MONGO_HOST=172.31.6.15
+MONGO_HOST=172.31.89.90
 
 VALIDATE(){
    if [ $1 -ne 0 ]
