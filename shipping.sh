@@ -77,11 +77,11 @@ VALIDATE $? "Starting shipping"
 dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "Installing MySQL"
 
-mysql -h $MYSQL_HOST -uroot -pRoboShop@1 -e "use cities" &>> $LOGFILE
+mysql -h $MYSQL_HOST -uroot --execute="use cities" &>> $LOGFILE
 if [ $? -ne 0 ]
 then
     echo "Schema is ... LOADING"
-    mysql -h $MYSQL_HOST -uroot -pRoboShop@1 < /app/schema/shipping.sql &>> $LOGFILE
+    mysql -h $MYSQL_HOST -uroot  < /app/schema/shipping.sql &>> $LOGFILE
     VALIDATE $? "Loading schema"
 else
     echo -e "Schema already exists... $Y SKIPPING $N"
